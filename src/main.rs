@@ -14,6 +14,27 @@ fn print_color(color: Color) -> () {
     }
 }
 
+impl Color {
+    fn is_green(&self) -> bool {
+        if let Color::Green = self {
+            return true;
+        } return false;
+    }
+
+    fn is_green_parts(&self) -> bool {
+        match self {
+            Color::Red => return false,
+            Color::Green => return false,
+            Color::Blue => return true,
+            Color::Yellow => return true,
+        }
+    }
+
+}
+
 fn main() {
-    print_color(Color::Yellow);
+   let foo = Color::Green; 
+
+   foo.is_green();
+
 }
